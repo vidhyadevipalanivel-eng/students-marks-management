@@ -1,0 +1,20 @@
+
+def calculate_result(marks):
+    total = sum(marks)
+    average = total / len(marks)
+
+    if all(mark >= 35 for mark in marks):
+        result = "PASS"
+    else:
+        result = "FAIL"
+
+    return total, average, result
+
+
+# Test the function
+marks = [80, 90, 70]
+total, average, result = calculate_result(marks)
+
+print("Total:", total)
+print("Average:", average)
+print("Result:", result)
